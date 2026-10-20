@@ -1,4 +1,6 @@
-![CarryOnPaper](assets/project-icon.webp)
+<p align="center">
+  <img src="assets/project-icon.webp" alt="CarryOnPaper logo" width="192">
+</p>
 
 # CarryOnPaper
 
