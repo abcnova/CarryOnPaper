@@ -1,0 +1,5 @@
+# Exclude local build output and decompiler/download scratch data.
+/target/
+/work/
+/.idea/
+*.iml

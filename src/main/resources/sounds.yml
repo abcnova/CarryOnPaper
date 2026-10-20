@@ -1,0 +1,93 @@
+# CarryOnPaper sound configuration.
+# Every message key can have its own sound. Set enabled: false to silence a single message.
+# Sound names use Bukkit/Paper Sound enum names.
+
+default:
+  enabled: true
+  sound: UI_BUTTON_CLICK
+  volume: 0.55
+  pitch: 1.15
+
+no-permission:
+  enabled: true
+  sound: ENTITY_VILLAGER_NO
+  volume: 0.8
+  pitch: 0.85
+
+only-players:
+  enabled: true
+  sound: ENTITY_VILLAGER_NO
+  volume: 0.8
+  pitch: 0.85
+
+unknown-subcommand:
+  enabled: true
+  sound: ENTITY_VILLAGER_NO
+  volume: 0.8
+  pitch: 0.85
+
+help:
+  enabled: true
+  sound: UI_BUTTON_CLICK
+  volume: 0.55
+  pitch: 1.15
+
+reloaded:
+  enabled: true
+  sound: BLOCK_NOTE_BLOCK_PLING
+  volume: 0.8
+  pitch: 1.35
+
+language-usage:
+  enabled: true
+  sound: ENTITY_VILLAGER_NO
+  volume: 0.8
+  pitch: 0.85
+
+language-changed:
+  enabled: true
+  sound: BLOCK_NOTE_BLOCK_PLING
+  volume: 0.8
+  pitch: 1.2
+
+pickup-block:
+  enabled: true
+  sound: ITEM_BUNDLE_INSERT
+  volume: 0.85
+  pitch: 0.95
+
+place-block:
+  enabled: true
+  sound: ITEM_BUNDLE_DROP_CONTENTS
+  volume: 0.85
+  pitch: 1.1
+
+pickup-entity:
+  enabled: true
+  sound: ENTITY_ITEM_PICKUP
+  volume: 0.8
+  pitch: 0.9
+
+place-entity:
+  enabled: true
+  sound: ENTITY_CHICKEN_EGG
+  volume: 0.8
+  pitch: 1.1
+
+cannot-carry:
+  enabled: true
+  sound: BLOCK_ANVIL_LAND
+  volume: 0.45
+  pitch: 1.4
+
+already-carrying:
+  enabled: true
+  sound: ENTITY_VILLAGER_NO
+  volume: 0.8
+  pitch: 0.85
+
+carry-limit-reached:
+  enabled: true
+  sound: BLOCK_NOTE_BLOCK_BASS
+  volume: 0.75
+  pitch: 0.8

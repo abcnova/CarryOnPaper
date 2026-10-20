@@ -1,0 +1,234 @@
+# CarryOnPaper configuration
+# This file is designed for public servers: every important behavior is configurable here.
+
+# Do not edit unless you know what you are doing. Used for safe config migrations.
+config-version: 7
+
+# Message language. Files are stored in plugins/CarryOnPaper/lang/.
+# Built-in languages: en_us, de-eu, fr_fr, es_es.
+language: en_us
+
+# Message parser.
+# minimessage = modern Adventure MiniMessage tags, for example <gold>CarryOn</gold>
+# legacy = classic Bukkit color codes, for example &6CarryOn
+message-format: minimessage
+
+# Players must sneak and right-click to pick up blocks or mobs.
+require-sneak: true
+
+# When true, both hands must be empty before picking something up.
+# For multiple carried items you may want to set this to false.
+require-empty-hands: true
+
+# The fallback item used while carrying something.
+# If use-realistic-carrier-items is true, blocks use their block item and mobs use spawn eggs where possible.
+carrier-item-material: PAPER
+
+# If true, carried blocks look like their block item and carried mobs look like spawn eggs where possible.
+use-realistic-carrier-items: true
+
+# Players carrying something receive this slowdown.
+# Set to 0.0 to disable. Negative values apply Slowness.
+carry-speed-modifier: -0.08
+
+# If true, players carrying something cannot open/use other blocks until they place what they carry.
+block-actions-while-carrying: true
+
+carrying:
+  # Allow one player to carry multiple block/mob carrier items at the same time.
+  # Default false keeps the classic Carry On feeling: one carried object per player.
+  multiple:
+    enabled: false
+
+    # Maximum carried objects per player when multiple.enabled is true.
+    # Players with carryon.bypass.limit ignore this limit.
+    max-carried: 3
+
+  # Allow players to move carrier items into chests, barrels, shulkers, hoppers, etc.
+  # Default false prevents storing mobs or filled containers inside other containers.
+  allow-carriers-in-containers: false
+
+blocks:
+  # If true, every normal block can be carried unless blacklisted.
+  # Public-server default is false: only containers and utility blocks in the whitelist can be carried.
+  allow-all: false
+
+  # Common containers and utility blocks allowed by default, including shulkers and anvils.
+  # Container inventories are stored safely only when preserve-inventories is true.
+  whitelist:
+    - CHEST
+    - TRAPPED_CHEST
+    - BARREL
+    - FURNACE
+    - BLAST_FURNACE
+    - SMOKER
+    - DROPPER
+    - DISPENSER
+    - HOPPER
+    - BREWING_STAND
+    - CRAFTING_TABLE
+    - JUKEBOX
+    - LECTERN
+    - CHISELED_BOOKSHELF
+    - SHULKER_BOX
+    - WHITE_SHULKER_BOX
+    - ORANGE_SHULKER_BOX
+    - MAGENTA_SHULKER_BOX
+    - LIGHT_BLUE_SHULKER_BOX
+    - YELLOW_SHULKER_BOX
+    - LIME_SHULKER_BOX
+    - PINK_SHULKER_BOX
+    - GRAY_SHULKER_BOX
+    - LIGHT_GRAY_SHULKER_BOX
+    - CYAN_SHULKER_BOX
+    - PURPLE_SHULKER_BOX
+    - BLUE_SHULKER_BOX
+    - BROWN_SHULKER_BOX
+    - GREEN_SHULKER_BOX
+    - RED_SHULKER_BOX
+    - BLACK_SHULKER_BOX
+    - ANVIL
+    - CHIPPED_ANVIL
+    - DAMAGED_ANVIL
+
+  # Blocks that can never be carried, even when allow-all is true.
+  blacklist:
+    - BEDROCK
+    - BARRIER
+    - COMMAND_BLOCK
+    - CHAIN_COMMAND_BLOCK
+    - REPEATING_COMMAND_BLOCK
+    - END_PORTAL_FRAME
+    - END_PORTAL
+    - NETHER_PORTAL
+    - SPAWNER
+    - STRUCTURE_BLOCK
+    - JIGSAW
+
+  # Store and restore inventories for chests, barrels, furnaces, hoppers, and similar blocks.
+  # Normal block breaking remains vanilla; this only applies to CarryOnPaper pickup.
+  preserve-inventories: true
+
+entities:
+  enabled: true
+
+  # If true, only mobs listed in whitelist can be carried.
+  # Blacklist is always checked first.
+  use-whitelist: false
+
+  # Player entities are always excluded for session safety; this key is retained for older configs.
+  allow-players: false
+
+  # Optional size protection. Default false because blacklist/whitelist gives admins full control.
+  size-check:
+    enabled: false
+    max-width: 2.0
+    max-height: 3.0
+
+  # Mobs that can never be carried.
+  # HAPPY_GHAST is allowed by default; add it to blacklist if you want to block it.
+  blacklist:
+    - ENDER_DRAGON
+    - ELDER_GUARDIAN
+    - GHAST
+    - GIANT
+    - WARDEN
+    - WITHER
+
+  # This list is used only when use-whitelist is true. New mob types are allowed by default.
+  # You can remove entries to block them, or set use-whitelist to false and rely on blacklist.
+  whitelist:
+    - ALLAY
+    - ARMADILLO
+    - ARMOR_STAND
+    - AXOLOTL
+    - BAT
+    - BEE
+    - BLAZE
+    - BOGGED
+    - BREEZE
+    - CAMEL
+    - CAMEL_HUSK
+    - CAT
+    - CAVE_SPIDER
+    - CHICKEN
+    - COD
+    - COPPER_GOLEM
+    - COW
+    - CREAKING
+    - CREEPER
+    - DOLPHIN
+    - DONKEY
+    - DROWNED
+    - ENDERMAN
+    - ENDERMITE
+    - EVOKER
+    - FOX
+    - FROG
+    - GLOW_SQUID
+    - GOAT
+    - GUARDIAN
+    - HAPPY_GHAST
+    - HOGLIN
+    - HORSE
+    - HUSK
+    - ILLUSIONER
+    - IRON_GOLEM
+    - LLAMA
+    - MAGMA_CUBE
+    - MANNEQUIN
+    - MOOSHROOM
+    - MULE
+    - NAUTILUS
+    - OCELOT
+    - PANDA
+    - PARCHED
+    - PARROT
+    - PHANTOM
+    - PIG
+    - PIGLIN
+    - PIGLIN_BRUTE
+    - PILLAGER
+    - POLAR_BEAR
+    - PUFFERFISH
+    - RABBIT
+    - RAVAGER
+    - SALMON
+    - SHEEP
+    - SHULKER
+    - SILVERFISH
+    - SKELETON
+    - SKELETON_HORSE
+    - SLIME
+    - SNIFFER
+    - SNOW_GOLEM
+    - SPIDER
+    - SQUID
+    - STRAY
+    - STRIDER
+    - TADPOLE
+    - TRADER_LLAMA
+    - TROPICAL_FISH
+    - TURTLE
+    - VEX
+    - VILLAGER
+    - VINDICATOR
+    - WANDERING_TRADER
+    - WITCH
+    - WITHER_SKELETON
+    - WOLF
+    - ZOGLIN
+    - ZOMBIE
+    - ZOMBIE_HORSE
+    - ZOMBIE_NAUTILUS
+    - ZOMBIE_VILLAGER
+    - ZOMBIFIED_PIGLIN
+
+  # Restore core mob data when possible.
+  # Villager and Wandering Trader trades are saved with Bukkit MerchantRecipe data.
+  preserve-basic-data: true
+
+# The checker makes a small public Modrinth API request at startup and every 12 hours.
+# It sends no player, server, address, or configuration data; only OPs and the console are notified.
+update-checker:
+  enabled: true

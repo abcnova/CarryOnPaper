@@ -1,0 +1,20 @@
+# CarryOnPaper German language file.
+# MiniMessage ist standardmaessig aktiv. Stelle message-format in config.yml auf legacy fuer & Farbcodes.
+
+# Dieser Prefix steht vor jeder Plugin-Nachricht.
+prefix: "<gold>CarryOn</gold> <dark_gray>›</dark_gray> "
+
+no-permission: "<red>Dazu hast du keine Rechte."
+only-players: "<red>Diesen Befehl kann nur ein Spieler nutzen."
+reloaded: "<green>Config, Sprache und Sounds wurden neu geladen."
+help: "<green>Nutze <white>/carryon reload</white> oder <white>/carryon language [en_us|de-eu|fr_fr|es_es]</white>. Shift-Rechtsklick auf konfigurierte Bloecke und Mobs traegt sie."
+unknown-subcommand: "<red>Unbekannter Unterbefehl. Nutze <white>/carryon help</white>."
+language-usage: "<red>Nutze: <white>/carryon language [en_us|de-eu|fr_fr|es_es]</white>"
+language-changed: "<green>Sprache wurde auf <white>%language%</white> gewechselt."
+pickup-block: "<green>Du hast <white>%name%</white> aufgenommen."
+place-block: "<green>Du hast <white>%name%</white> platziert."
+pickup-entity: "<green>Du hast <white>%name%</white> aufgenommen."
+place-entity: "<green>Du hast <white>%name%</white> platziert."
+cannot-carry: "<red>Das kannst du nicht tragen."
+already-carrying: "<red>Du traegst bereits etwas."
+carry-limit-reached: "<red>Du kannst nicht mehr als <white>%limit%</white> Objekte tragen."

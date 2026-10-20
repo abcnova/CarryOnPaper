@@ -1,0 +1,20 @@
+# CarryOnPaper Spanish language file.
+# MiniMessage se usa por defecto. Cambia message-format a legacy en config.yml para usar codigos &.
+
+# This prefix is placed before every plugin message.
+prefix: "<gold>CarryOn</gold> <dark_gray>›</dark_gray> "
+
+no-permission: "<red>No tienes permiso."
+only-players: "<red>Solo los jugadores pueden usar este comando."
+reloaded: "<green>Configuracion, idioma y sonidos recargados."
+help: "<green>Usa <white>/carryon reload</white> o <white>/carryon language [en_us|de-eu|fr_fr|es_es]</white>. Agachate y haz clic derecho en bloques y mobs configurados para cargarlos."
+unknown-subcommand: "<red>Subcomando desconocido. Usa <white>/carryon help</white>."
+language-usage: "<red>Uso: <white>/carryon language [en_us|de-eu|fr_fr|es_es]</white>"
+language-changed: "<green>Idioma cambiado a <white>%language%</white>."
+pickup-block: "<green>Recogiste <white>%name%</white>."
+place-block: "<green>Colocaste <white>%name%</white>."
+pickup-entity: "<green>Recogiste <white>%name%</white>."
+place-entity: "<green>Colocaste <white>%name%</white>."
+cannot-carry: "<red>No puedes cargar esto."
+already-carrying: "<red>Ya estas cargando algo."
+carry-limit-reached: "<red>No puedes cargar mas de <white>%limit%</white> objetos."

@@ -1,0 +1,38 @@
+name: ${plugin.name}
+version: ${project.version}
+main: io.github.abcnova.carryon.CarryOnPlugin
+api-version: '1.21'
+author: ABC_Nova
+website: https://modrinth.com/plugin/carryonpaper
+description: "${plugin.description}"
+commands:
+  carryon:
+    description: Manage CarryOn.
+    aliases: [co, carry]
+    usage: /carryon <help|reload|language>
+permissions:
+  carryon.use:
+    description: Allows using CarryOn pickup and place actions.
+    default: true
+  carryon.carry.blocks:
+    description: Allows carrying configured blocks.
+    default: true
+  carryon.carry.entities:
+    description: Allows carrying configured mobs.
+    default: true
+  carryon.admin:
+    description: Allows all administrative CarryOn actions.
+    default: op
+    children:
+      carryon.reload: true
+      carryon.language: true
+      carryon.bypass.limit: true
+  carryon.reload:
+    description: Allows /carryon reload.
+    default: op
+  carryon.language:
+    description: Allows /carryon language.
+    default: op
+  carryon.bypass.limit:
+    description: Allows bypassing the configured carry limit.
+    default: op
